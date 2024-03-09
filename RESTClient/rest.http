@@ -1,0 +1,28 @@
+### Get all products
+GET http://localhost:8000/api/v1/products
+
+### Get a specific product by ID
+GET http://localhost:8000/api/v1/products/
+
+### Create a new product
+POST http://localhost:8000/api/v1/products
+Content-Type: application/json
+
+{
+    "name": "Produto Teste",
+    "description": "Descrição do produto teste",
+    "price": 100
+}
+
+### Update a product by ID
+PATCH http://localhost:8000/api/v1/products/
+Content-Type: application/json
+
+{
+    "name": "Produto Atualizado",
+    "description": "Descrição atualizada",
+    "price": 150
+}
+
+### Delete a product by ID
+DELETE http://localhost:8000/api/v1/products/1

@@ -1,5 +1,16 @@
 # Go REST API Boilerplate
+
 Golang API boilerplate using GoFiber and PostgreSQL
+
+## Using
+
+- fiber
+- air
+- postgres
+- RESTClient
+- sqlboiler
+- 
+
 
 ## Folder Structure
 
@@ -35,6 +46,11 @@ Golang API boilerplate using GoFiber and PostgreSQL
 3. Search for `atharvbhadange/go-api-template` in the project and replace it with `<your-github-id/project-name>`.
 
 4. Run `go install github.com/volatiletech/sqlboiler/v4/drivers/sqlboiler-psql@latest` to install sqlboiler for generating models.
+
+```
+go get -u github.com/volatiletech/sqlboiler/v4
+go install github.com/volatiletech/sqlboiler/v4@latest
+```
 
 5. Change the `models/sqlboiler.toml` file to match your database configuration.
 
@@ -76,4 +92,10 @@ CREATE TABLE IF NOT EXISTS products (
   created timestamp NOT NULL,
   modified timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+```
+
+## Migration
+
+```
+goose -dir migrations postgres "host=localhost port=5432 user=postgres password=pass123 dbname=dev sslmode=disable" up
 ```
