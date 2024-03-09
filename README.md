@@ -9,8 +9,6 @@ Golang API boilerplate using GoFiber and PostgreSQL
 - postgres
 - RESTClient
 - sqlboiler
-- 
-
 
 ## Folder Structure
 
